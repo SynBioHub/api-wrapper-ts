@@ -29,14 +29,16 @@ export default class SynBioHub {
       password: this.user.password
     }
 
-    return this.sendJSONRequest("/login", body).then(response => {
-      if (response.status > 300 || response.body == null) {
-        return false
-      } else {
-        this.user.token = response.body.toString()
-        return true
-      }
-    })
+    return this.sendJSONRequest("/login", body)
+      .then(response => {
+        if (response == null || response.status > 300) {
+          return false
+        } else {
+          this.user.token = response.toString()
+          return true
+        }
+      })
+      .catch(err => false)
   }
 
   private sendJSONRequest(endpoint: string, body?: object): Promise<Response> {
@@ -46,7 +48,7 @@ export default class SynBioHub {
         Accept: "text/plain",
         "X-authorization": this.user.token
       },
-      method: method,
+
       body: body,
       json: true
     }
@@ -55,6 +57,6 @@ export default class SynBioHub {
       delete options.headers["X-authorization"]
     }
 
-    return request(options)
+    return request.post(options)
   }
 }
