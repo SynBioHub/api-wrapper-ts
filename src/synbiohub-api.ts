@@ -6,7 +6,7 @@ export default class SynBioHub {
   url: string
 
   constructor(instanceUrl: string) {
-    if (instanceUrl.slice(-1) == "/") {
+    if (instanceUrl.slice(-1) === "/") {
       instanceUrl = instanceUrl.substr(0, instanceUrl.length - 1)
     }
 
@@ -14,7 +14,7 @@ export default class SynBioHub {
   }
 
   public login(email: string, password: string): Promise<boolean> {
-    if (email.length == 0 || password.length == 0) {
+    if (email.length === 0 || password.length === 0) {
       return Promise.reject("You must provide a username and password.")
     }
 
