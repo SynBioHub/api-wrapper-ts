@@ -38,7 +38,9 @@ export default class SynBioHub {
           return true
         }
       })
-      .catch(err => false)
+      .catch(err => {
+        return false
+      })
   }
 
   private sendJSONRequest(endpoint: string, body?: object): Promise<Response> {
