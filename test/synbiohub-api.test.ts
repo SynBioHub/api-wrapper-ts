@@ -1,14 +1,21 @@
-import DummyClass from "../src/synbiohub-api"
+import SynBioHub from "../src/synbiohub-api"
 
 /**
- * Dummy test
+ * SynBioHub tests
  */
-describe("Dummy test", () => {
-  it("works if true is truthy", () => {
-    expect(true).toBeTruthy()
+describe("SynBioHub test", () => {
+  it("SynBioHub is instantiable", () => {
+    expect(new SynBioHub("https://synbiohub.org")).toBeInstanceOf(SynBioHub)
   })
 
-  it("DummyClass is instantiable", () => {
-    expect(new DummyClass()).toBeInstanceOf(DummyClass)
+  it("SynBioHub correctly creates URI string", () => {
+    expect(new SynBioHub("https://synbiohub.org")).toHaveProperty(
+      "url",
+      "https://synbiohub.org"
+    )
+    expect(new SynBioHub("https://synbiohub.org/")).toHaveProperty(
+      "url",
+      "https://synbiohub.org"
+    )
   })
 })
