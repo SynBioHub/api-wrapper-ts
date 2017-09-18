@@ -38,7 +38,7 @@ export default class SynBioHub {
           return true
         }
       })
-      .catch(err => {
+      .catch(problem => {
         return false
       })
   }
