@@ -3,6 +3,7 @@ import commonjs from 'rollup-plugin-commonjs'
 import sourceMaps from 'rollup-plugin-sourcemaps'
 const pkg = require('./package.json')
 const camelCase = require('lodash.camelcase')
+import json from 'rollup-plugin-json';
 
 const libraryName = 'synbiohub-api'
 
@@ -24,6 +25,15 @@ export default {
     resolve(),
 
     // Resolve source maps to the original source
-    sourceMaps()
+    sourceMaps(),
+    json({
+      // All JSON files will be parsed by default,
+      // but you can also specifically include/exclude files
+      include: 'node_modules/**',
+
+      // specify indentation for the generated default export —
+      // defaults to '\t'
+      indent: '  '
+    })
   ]
 }
