@@ -45,6 +45,7 @@ describe("SynBioHub", () => {
       .login("continuous@integration.com", "continuousintegration")
       .then(success => {
         if (success) {
+          console.log(success)
           return synbiohub.getRootCollections()
         } else {
           fail()
