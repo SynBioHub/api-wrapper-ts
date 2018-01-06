@@ -1,5 +1,6 @@
 import { SynBioHubUser } from "./user"
-import * as request from "request-promise-native"
+import { Collection } from "./collection"
+import axios, { AxiosRequestConfig, AxiosPromise } from "axios"
 
 export default class SynBioHub {
   user: SynBioHubUser
@@ -11,6 +12,14 @@ export default class SynBioHub {
     }
 
     this.url = instanceUrl
+  }
+
+  public getRootCollections(): Promise<Array<string>> {
+    return this.sendGetRequest("/rootCollections").then(response => {
+      return response.data.map((collection: Collection) => {
+        return collection.uri
+      })
+    })
   }
 
   public login(email: string, password: string): Promise<boolean> {
@@ -39,26 +48,51 @@ export default class SynBioHub {
         }
       })
       .catch(problem => {
-        return false
+        if (
+          problem.response.data &&
+          problem.response.data === "Your password was not recognized."
+        ) {
+          return false // This is to cope with an incorrect SBH response, SBH issue #557
+        } else {
+          throw problem
+        }
       })
   }
 
-  private sendJSONRequest(endpoint: string, body?: object): Promise<Response> {
+  private sendGetRequest(endpoint: string): AxiosPromise {
     let options = {
       url: this.url + endpoint,
+      method: "get",
       headers: {
         Accept: "text/plain",
         "X-authorization": this.user.token
-      },
-
-      body: body,
-      json: true
+      }
     }
 
     if (!this.user.token) {
       delete options.headers["X-authorization"]
     }
 
-    return request.post(options)
+    return axios.request(options)
+  }
+
+  private sendJSONRequest(endpoint: string, body?: object): AxiosPromise {
+    let options = {
+      url: this.url + endpoint,
+      method: "post",
+      headers: {
+        Accept: "text/plain",
+        "X-Authorization": this.user.token,
+        "Content-Type": "application/json"
+      },
+
+      data: body
+    }
+
+    if (!this.user.token) {
+      delete options.headers["X-Authorization"]
+    }
+
+    return axios.request(options)
   }
 }

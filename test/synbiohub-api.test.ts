@@ -9,36 +9,49 @@ describe("SynBioHub", () => {
   })
 
   it("correctly creates URI string", () => {
-    expect(new SynBioHub("https://synbiohub.org")).toHaveProperty(
-      "url",
-      "https://synbiohub.org"
-    )
-    expect(new SynBioHub("https://synbiohub.org/")).toHaveProperty(
-      "url",
-      "https://synbiohub.org"
-    )
+    expect(new SynBioHub("https://synbiohub.org")).toHaveProperty("url", "https://synbiohub.org")
+    expect(new SynBioHub("https://synbiohub.org/")).toHaveProperty("url", "https://synbiohub.org")
   })
 
+  // Authentication
   it("rejects bad authentication credentials", () => {
-    expect.assertions(1)
-    new SynBioHub("https://synbiohub.org").login("", "").catch(err => {
-      expect(err).toEqual("You must provide a username and password.")
-    })
+    return expect(new SynBioHub("https://synbiohub.org").login("", "")).rejects.toEqual(
+      "You must provide a username and password."
+    )
   })
 
   it("correctly logs in valid credentials", () => {
-    new SynBioHub("https://synbiohub.utah.edu")
-      .login("continuous@integration.com", "continuousintegration")
-      .then(result => {
-        expect(result).toBeTruthy()
-      })
+    let synbiohub = new SynBioHub("https://synbiohub.utah.edu")
+
+    return expect(
+      synbiohub.login("continuous@integration.com", "continuousintegration")
+    ).resolves.toBeTruthy()
   })
 
   it("correctly denies invalid credentials", () => {
-    new SynBioHub("https://synbiohub.utah.edu")
-      .login("continuous@integration.com", "nottherightpassword")
-      .then(result => {
-        expect(result).toBeFalsy()
+    return expect(
+      new SynBioHub("https://synbiohub.utah.edu").login(
+        "continuous@integration.com",
+        "nottherightpassword"
+      )
+    ).resolves.toBeFalsy()
+  })
+
+  // Root Collections
+  it("retrieves root collections", () => {
+    let synbiohub = new SynBioHub("https://synbiohub.utah.edu")
+
+    synbiohub
+      .login("continuous@integration.com", "continuousintegration")
+      .then(success => {
+        if (success) {
+          return synbiohub.getRootCollections()
+        } else {
+          fail()
+        }
+      })
+      .then(collections => {
+        console.log(collections)
       })
   })
 })
