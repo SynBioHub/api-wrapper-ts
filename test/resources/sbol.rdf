@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:prov="http://www.w3.org/ns/prov#" xmlns:sbol="http://sbols.org/v2#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#dateTime/" xmlns:synbiohub="http://synbiohub.org#" xmlns:sbh="http://wiki.synbiohub.org/wiki/Terms/synbiohub#" xmlns:sybio="http://www.sybio.ncl.ac.uk#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:ncbi="http://www.ncbi.nlm.nih.gov#" xmlns:igem="http://wiki.synbiohub.org/wiki/Terms/igem#" xmlns:genbank="http://www.ncbi.nlm.nih.gov/genbank#" xmlns:gbconv="http://sbols.org/genBankConversion#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:obo="http://purl.obolibrary.org/obo/">
+  <sbol:ComponentDefinition rdf:about="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913/1">
+    <sbol:persistentIdentity rdf:resource="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913"/>
+    <sbol:displayId>NC_000913</sbol:displayId>
+    <sbol:version>1</sbol:version>
+    <dcterms:description>Escherichia coli str. K-12 substr. MG1655, complete genome.</dcterms:description>
+    <obo:OBI_0001617>9278503</obo:OBI_0001617>
+    <obo:OBI_0001617>16738553</obo:OBI_0001617>
+    <obo:OBI_0001617>16397293 REMARK    Publication Status: Online-Only</obo:OBI_0001617>
+    <sbh:ownedBy rdf:resource="https://synbiohub.utah.edu/user/continuous"/>
+    <genbank:comment>REVIEWED REFSEQ: This record has been curated by NCBI staff. The reference sequence is identical to U00096. On Nov 3, 2013 this sequence version replaced gi:49175990. RefSeq Category: Reference Genome FGS: First Genome sequenced MOD: Model Organism PHY: Based on Phylogenetics UPR: UniProt Genome Current U00096 annotation updates are derived from EcoGene http://ecogene.org. Suggestions for updates can be sent to Dr. Kenneth Rudd (krudd@miami.edu). These updates are being generated from a collaboration that also includes ASAP/ERIC, the Coli Genetic Stock Center, EcoliHub, EcoCyc, RegulonDB and UniProtKB/Swiss-Prot. COMPLETENESS: full length.</genbank:comment>
+    <sbh:topLevel rdf:resource="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913/1"/>
+    <genbank:organism>Escherichia coli str. K-12 substr. MG1655 Bacteria; Proteobacteria; Gammaproteobacteria; Enterobacterales; Enterobacteriaceae; Escherichia.</genbank:organism>
+    <genbank:GInumber>DBLINK</genbank:GInumber>
+    <genbank:date>08-AUG-2016</genbank:date>
+    <genbank:division>CON</genbank:division>
+    <genbank:keywords>RefSeq.</genbank:keywords>
+    <genbank:locus>NC_000913</genbank:locus>
+    <genbank:molecule>DNA</genbank:molecule>
+    <genbank:reference>
+      <genbank:Reference rdf:about="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913_reference14/1">
+        <sbh:topLevel rdf:resource="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913/1"/>
+        <genbank:authors>Plunkett,G. III.</genbank:authors>
+        <genbank:journal>Submitted (07-FEB-2006) Laboratory of Genetics, University of Wisconsin, 425G Henry Mall, Madison, WI 53706-1580, USA REMARK    Protein updates by submitter</genbank:journal>
+        <genbank:label>15 (bases 1 to 318)</genbank:label>
+        <genbank:title>Direct Submission</genbank:title>
+      </genbank:Reference>
+    </genbank:reference>
+    <genbank:reference>
+      <genbank:Reference rdf:about="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913_reference11/1">
+        <sbh:topLevel rdf:resource="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913/1"/>
+        <genbank:authors>Blattner,F.R. and Plunkett,G. III.</genbank:authors>
+        <genbank:journal>Submitted (26-SEP-2013) Laboratory of Genetics, University of Wisconsin, 425G Henry Mall, Madison, WI 53706-1580, USA REMARK    Sequence update by submitter</genbank:journal>
+        <genbank:label>12 (bases 1 to 318)</genbank:label>
+        <genbank:title>Direct Submission</genbank:title>
+      </genbank:Reference>
+    </genbank:reference>
+    <genbank:reference>
+      <genbank:Reference rdf:about="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913_reference12/1">
+        <sbh:topLevel rdf:resource="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913/1"/>
+        <genbank:authors>Rudd,K.E.</genbank:authors>
+        <genbank:journal>Submitted (06-FEB-2013) Department of Biochemistry and Molecular Biology, University of Miami Miller School of Medicine, 118 Gautier Bldg., Miami, FL 33136, USA REMARK    Sequence update by submitter</genbank:journal>
+        <genbank:label>13 (bases 1 to 318)</genbank:label>
+        <genbank:title>Direct Submission</genbank:title>
+      </genbank:Reference>
+    </genbank:reference>
+    <genbank:reference>
+      <genbank:Reference rdf:about="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913_reference1/1">
+        <sbh:topLevel rdf:resource="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913/1"/>
+        <genbank:authors>Hayashi,K., Morooka,N., Yamamoto,Y., Fujita,K., Isono,K., Choi,S., Ohtsubo,E., Baba,T., Wanner,B.L., Mori,H. and Horiuchi,T.</genbank:authors>
+        <genbank:journal>Mol. Syst. Biol. 2, 2006 (2006)</genbank:journal>
+        <genbank:label>2  (bases 1 to 318)</genbank:label>
+        <genbank:pubmed>16738553</genbank:pubmed>
+        <genbank:title>Highly accurate genome sequences of Escherichia coli K-12 strains MG1655 and W3110</genbank:title>
+      </genbank:Reference>
+    </genbank:reference>
+    <genbank:reference>
+      <genbank:Reference rdf:about="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913_reference10/1">
+        <sbh:topLevel rdf:resource="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913/1"/>
+        <genbank:authors>Blattner,F.R. and Plunkett,G. III.</genbank:authors>
+        <genbank:journal>Submitted (15-NOV-2013) Laboratory of Genetics, University of Wisconsin, 425G Henry Mall, Madison, WI 53706-1580, USA REMARK    Protein update by submitter</genbank:journal>
+        <genbank:label>11 (bases 1 to 318)</genbank:label>
+        <genbank:title>Direct Submission</genbank:title>
+      </genbank:Reference>
+    </genbank:reference>
+    <genbank:reference>
+      <genbank:Reference rdf:about="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913_reference0/1">
+        <sbh:topLevel rdf:resource="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913/1"/>
+        <genbank:authors>Riley,M., Abe,T., Arnaud,M.B., Berlyn,M.K., Blattner,F.R., Chaudhuri,R.R., Glasner,J.D., Horiuchi,T., Keseler,I.M., Kosuge,T., Mori,H., Perna,N.T., Plunkett,G. III, Rudd,K.E., Serres,M.H., Thomas,G.H., Thomson,N.R., Wishart,D. and Wanner,B.L.</genbank:authors>
+        <genbank:journal>Nucleic Acids Res. 34 (1), 1-9 (2006)</genbank:journal>
+        <genbank:label>1  (bases 1 to 318)</genbank:label>
+        <genbank:pubmed>16397293 REMARK    Publication Status: Online-Only</genbank:pubmed>
+        <genbank:title>Escherichia coli K-12: a cooperatively developed annotation snapshot--2005</genbank:title>
+      </genbank:Reference>
+    </genbank:reference>
+    <genbank:reference>
+      <genbank:Reference rdf:about="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913_reference8/1">
+        <sbh:topLevel rdf:resource="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913/1"/>
+        <genbank:journal>Submitted (26-AUG-2014) National Center for Biotechnology Information, NIH, Bethesda, MD 20894, USA</genbank:journal>
+        <genbank:label>9  (bases 1 to 318) CONSRTM   NCBI Genome Project</genbank:label>
+        <genbank:title>Direct Submission</genbank:title>
+      </genbank:Reference>
+    </genbank:reference>
+    <genbank:reference>
+      <genbank:Reference rdf:about="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913_reference9/1">
+        <sbh:topLevel rdf:resource="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913/1"/>
+        <genbank:authors>Blattner,F.R. and Plunkett,G. III.</genbank:authors>
+        <genbank:journal>Submitted (30-JUL-2014) Laboratory of Genetics, University of Wisconsin, 425G Henry Mall, Madison, WI 53706-1580, USA REMARK    Protein update by submitter</genbank:journal>
+        <genbank:label>10 (bases 1 to 318)</genbank:label>
+        <genbank:title>Direct Submission</genbank:title>
+      </genbank:Reference>
+    </genbank:reference>
+    <genbank:reference>
+      <genbank:Reference rdf:about="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913_reference6/1">
+        <sbh:topLevel rdf:resource="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913/1"/>
+        <genbank:authors>Perna,N.T.</genbank:authors>
+        <genbank:journal>Unpublished REMARK    GenBank accession AY605712 (sequence corrections)</genbank:journal>
+        <genbank:label>7  (bases 1 to 318)</genbank:label>
+        <genbank:title>Escherichia coli K-12 MG1655 yqiK-rfaE intergenic region, genomic sequence correction</genbank:title>
+      </genbank:Reference>
+    </genbank:reference>
+    <genbank:reference>
+      <genbank:Reference rdf:about="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913_reference7/1">
+        <sbh:topLevel rdf:resource="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913/1"/>
+        <genbank:authors>Rudd,K.E.</genbank:authors>
+        <genbank:journal>Unpublished</genbank:journal>
+        <genbank:label>8  (bases 1 to 318)</genbank:label>
+        <genbank:title>A manual approach to accurate translation start site annotation: an E. coli K-12 case study</genbank:title>
+      </genbank:Reference>
+    </genbank:reference>
+    <genbank:reference>
+      <genbank:Reference rdf:about="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913_reference4/1">
+        <sbh:topLevel rdf:resource="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913/1"/>
+        <genbank:authors>Glasner,J.D., Perna,N.T., Plunkett,G. III, Anderson,B.D., Bockhorst,J., Hu,J.C., Riley,M., Rudd,K.E. and Serres,M.H.</genbank:authors>
+        <genbank:journal>Unpublished REMARK    ASAP download 10 June 2004 (annotation updates)</genbank:journal>
+        <genbank:label>5  (bases 1 to 318)</genbank:label>
+        <genbank:title>ASAP: Escherichia coli K-12 strain MG1655 version m56</genbank:title>
+      </genbank:Reference>
+    </genbank:reference>
+    <genbank:reference>
+      <genbank:Reference rdf:about="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913_reference5/1">
+        <sbh:topLevel rdf:resource="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913/1"/>
+        <genbank:authors>Hayashi,K., Morooka,N., Mori,H. and Horiuchi,T.</genbank:authors>
+        <genbank:journal>Unpublished REMARK    GenBank accessions AG613214 to AG613378 (sequence corrections)</genbank:journal>
+        <genbank:label>6  (bases 1 to 318)</genbank:label>
+        <genbank:title>A more accurate sequence comparison between genomes of Escherichia coli K12 W3110 and MG1655 strains</genbank:title>
+      </genbank:Reference>
+    </genbank:reference>
+    <genbank:reference>
+      <genbank:Reference rdf:about="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913_reference2/1">
+        <sbh:topLevel rdf:resource="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913/1"/>
+        <genbank:authors>Blattner,F.R., Plunkett,G. III, Bloch,C.A., Perna,N.T., Burland,V., Riley,M., Collado-Vides,J., Glasner,J.D., Rode,C.K., Mayhew,G.F., Gregor,J., Davis,N.W., Kirkpatrick,H.A., Goeden,M.A., Rose,D.J., Mau,B. and Shao,Y.</genbank:authors>
+        <genbank:journal>Science 277 (5331), 1453-1462 (1997)</genbank:journal>
+        <genbank:label>3  (bases 1 to 318)</genbank:label>
+        <genbank:pubmed>9278503</genbank:pubmed>
+        <genbank:title>The complete genome sequence of Escherichia coli K-12</genbank:title>
+      </genbank:Reference>
+    </genbank:reference>
+    <genbank:reference>
+      <genbank:Reference rdf:about="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913_reference3/1">
+        <sbh:topLevel rdf:resource="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913/1"/>
+        <genbank:authors>Arnaud,M., Berlyn,M.K.B., Blattner,F.R., Galperin,M.Y., Glasner,J.D., Horiuchi,T., Kosuge,T., Mori,H., Perna,N.T., Plunkett,G. III, Riley,M., Rudd,K.E., Serres,M.H., Thomas,G.H. and Wanner,B.L.</genbank:authors>
+        <genbank:journal>Unpublished REMARK    Woods Hole, Mass., on 14-18 November 2003 (sequence corrections)</genbank:journal>
+        <genbank:label>4  (bases 1 to 318)</genbank:label>
+        <genbank:title>Workshop on Annotation of Escherichia coli K-12</genbank:title>
+      </genbank:Reference>
+    </genbank:reference>
+    <genbank:reference>
+      <genbank:Reference rdf:about="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913_reference17/1">
+        <sbh:topLevel rdf:resource="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913/1"/>
+        <genbank:authors>Blattner,F.R. and Plunkett,G. III.</genbank:authors>
+        <genbank:journal>Submitted (02-SEP-1997) Laboratory of Genetics, University of Wisconsin, 425G Henry Mall, Madison, WI 53706-1580, USA</genbank:journal>
+        <genbank:label>18 (bases 1 to 318)</genbank:label>
+        <genbank:title>Direct Submission</genbank:title>
+      </genbank:Reference>
+    </genbank:reference>
+    <genbank:reference>
+      <genbank:Reference rdf:about="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913_reference18/1">
+        <sbh:topLevel rdf:resource="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913/1"/>
+        <genbank:authors>Blattner,F.R. and Plunkett,G. III.</genbank:authors>
+        <genbank:journal>Submitted (16-JAN-1997) Laboratory of Genetics, University of Wisconsin, 425G Henry Mall, Madison, WI 53706-1580, USA</genbank:journal>
+        <genbank:label>19 (bases 1 to 318)</genbank:label>
+        <genbank:title>Direct Submission</genbank:title>
+      </genbank:Reference>
+    </genbank:reference>
+    <genbank:reference>
+      <genbank:Reference rdf:about="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913_reference15/1">
+        <sbh:topLevel rdf:resource="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913/1"/>
+        <genbank:authors>Plunkett,G. III.</genbank:authors>
+        <genbank:journal>Submitted (10-JUN-2004) Laboratory of Genetics, University of Wisconsin, 425G Henry Mall, Madison, WI 53706-1580, USA REMARK    Sequence update by submitter</genbank:journal>
+        <genbank:label>16 (bases 1 to 318)</genbank:label>
+        <genbank:title>Direct Submission</genbank:title>
+      </genbank:Reference>
+    </genbank:reference>
+    <genbank:reference>
+      <genbank:Reference rdf:about="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913_reference16/1">
+        <sbh:topLevel rdf:resource="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913/1"/>
+        <genbank:authors>Plunkett,G. III.</genbank:authors>
+        <genbank:journal>Submitted (13-OCT-1998) Laboratory of Genetics, University of Wisconsin, 425G Henry Mall, Madison, WI 53706-1580, USA</genbank:journal>
+        <genbank:label>17 (bases 1 to 318)</genbank:label>
+        <genbank:title>Direct Submission</genbank:title>
+      </genbank:Reference>
+    </genbank:reference>
+    <genbank:reference>
+      <genbank:Reference rdf:about="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913_reference13/1">
+        <sbh:topLevel rdf:resource="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913/1"/>
+        <genbank:authors>Rudd,K.E.</genbank:authors>
+        <genbank:journal>Submitted (24-APR-2007) Department of Biochemistry and Molecular Biology, University of Miami Miller School of Medicine, 118 Gautier Bldg., Miami, FL 33136, USA REMARK    Annotation update from ecogene.org as a multi-database collaboration</genbank:journal>
+        <genbank:label>14 (bases 1 to 318)</genbank:label>
+        <genbank:title>Direct Submission</genbank:title>
+      </genbank:Reference>
+    </genbank:reference>
+    <genbank:source>Escherichia coli str. K-12 substr. MG1655</genbank:source>
+    <sbol:type rdf:resource="http://identifiers.org/so/SO:0000987"/>
+    <sbol:type rdf:resource="http://www.biopax.org/release/biopax-level3.owl#DnaRegion"/>
+    <sbol:role rdf:resource="http://identifiers.org/so/SO:0000804"/>
+    <sbol:sequenceAnnotation>
+      <sbol:SequenceAnnotation rdf:about="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913/annotation2/1">
+        <sbol:persistentIdentity rdf:resource="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913/annotation2"/>
+        <sbol:displayId>annotation2</sbol:displayId>
+        <sbol:version>1</sbol:version>
+        <dcterms:title>transcriptional repressor, S-adenosylmethionine-binding</dcterms:title>
+        <gbconv:transl_table>11</gbconv:transl_table>
+        <sbh:ownedBy rdf:resource="https://synbiohub.utah.edu/user/continuous"/>
+        <gbconv:gene_synonym>ECK3930; JW3909</gbconv:gene_synonym>
+        <gbconv:GO_component>GO:0005737 - cytoplasm</gbconv:GO_component>
+        <gbconv:GO_function>GO:0016564 - transcription repressor activity</gbconv:GO_function>
+        <gbconv:GO_process>GO:0009086 - methionine biosynthetic process; GO:0006350 - transcription</gbconv:GO_process>
+        <gbconv:function>regulator; Amino acid biosynthesis: Methionine</gbconv:function>
+        <sbh:topLevel rdf:resource="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913/1"/>
+        <gbconv:codon_start>1</gbconv:codon_start>
+        <gbconv:db_xref>GeneID:948435</gbconv:db_xref>
+        <gbconv:db_xref>EcoGene:EG10588</gbconv:db_xref>
+        <gbconv:db_xref>UniProtKB/Swiss-Prot:P0A8U6</gbconv:db_xref>
+        <gbconv:db_xref>ASAP:ABE-0012874</gbconv:db_xref>
+        <gbconv:gene>metJ</gbconv:gene>
+        <gbconv:note>repressor of all met genes but metF</gbconv:note>
+        <gbconv:product>transcriptional repressor, S-adenosylmethionine-binding</gbconv:product>
+        <gbconv:protein_id>NP_418373.1</gbconv:protein_id>
+        <gbconv:translation>MAEWSGEYISPYAEHGKKSEQVKKITVSIPLKVLKILTDERTRRQVNNLRHATNSELLCEAFLHAFTGQPLPDDADLRKERSDEIPEAAKEIMREMGINPETWEY</gbconv:translation>
+        <gbconv:locus_tag>b3938</gbconv:locus_tag>
+        <sbol:location>
+          <sbol:Range rdf:about="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913/annotation2/range/1">
+            <sbol:persistentIdentity rdf:resource="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913/annotation2/range"/>
+            <sbol:displayId>range</sbol:displayId>
+            <sbol:version>1</sbol:version>
+            <sbh:ownedBy rdf:resource="https://synbiohub.utah.edu/user/continuous"/>
+            <sbh:topLevel rdf:resource="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913/1"/>
+            <sbol:start>1</sbol:start>
+            <sbol:end>318</sbol:end>
+            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
+          </sbol:Range>
+        </sbol:location>
+        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000316"/>
+      </sbol:SequenceAnnotation>
+    </sbol:sequenceAnnotation>
+    <sbol:sequenceAnnotation>
+      <sbol:SequenceAnnotation rdf:about="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913/annotation0/1">
+        <sbol:persistentIdentity rdf:resource="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913/annotation0"/>
+        <sbol:displayId>annotation0</sbol:displayId>
+        <sbol:version>1</sbol:version>
+        <dcterms:title>Escherichia coli str. K-12 substr. MG1655</dcterms:title>
+        <sbh:ownedBy rdf:resource="https://synbiohub.utah.edu/user/continuous"/>
+        <gbconv:sub_strain>MG1655</gbconv:sub_strain>
+        <sbh:topLevel rdf:resource="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913/1"/>
+        <gbconv:db_xref>taxon:511145</gbconv:db_xref>
+        <gbconv:mol_type>genomic DNA</gbconv:mol_type>
+        <gbconv:organism>Escherichia coli str. K-12 substr. MG1655</gbconv:organism>
+        <gbconv:strain>K-12</gbconv:strain>
+        <sbol:location>
+          <sbol:Range rdf:about="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913/annotation0/range/1">
+            <sbol:persistentIdentity rdf:resource="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913/annotation0/range"/>
+            <sbol:displayId>range</sbol:displayId>
+            <sbol:version>1</sbol:version>
+            <sbh:ownedBy rdf:resource="https://synbiohub.utah.edu/user/continuous"/>
+            <sbh:topLevel rdf:resource="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913/1"/>
+            <sbol:start>1</sbol:start>
+            <sbol:end>318</sbol:end>
+            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
+          </sbol:Range>
+        </sbol:location>
+        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000149"/>
+      </sbol:SequenceAnnotation>
+    </sbol:sequenceAnnotation>
+    <sbol:sequenceAnnotation>
+      <sbol:SequenceAnnotation rdf:about="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913/annotation1/1">
+        <sbol:persistentIdentity rdf:resource="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913/annotation1"/>
+        <sbol:displayId>annotation1</sbol:displayId>
+        <sbol:version>1</sbol:version>
+        <dcterms:title>metJ</dcterms:title>
+        <sbh:ownedBy rdf:resource="https://synbiohub.utah.edu/user/continuous"/>
+        <gbconv:gene_synonym>ECK3930; JW3909</gbconv:gene_synonym>
+        <sbh:topLevel rdf:resource="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913/1"/>
+        <gbconv:db_xref>EcoGene:EG10588</gbconv:db_xref>
+        <gbconv:db_xref>GeneID:948435</gbconv:db_xref>
+        <gbconv:gene>metJ</gbconv:gene>
+        <gbconv:locus_tag>b3938</gbconv:locus_tag>
+        <sbol:location>
+          <sbol:Range rdf:about="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913/annotation1/range/1">
+            <sbol:persistentIdentity rdf:resource="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913/annotation1/range"/>
+            <sbol:displayId>range</sbol:displayId>
+            <sbol:version>1</sbol:version>
+            <sbh:ownedBy rdf:resource="https://synbiohub.utah.edu/user/continuous"/>
+            <sbh:topLevel rdf:resource="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913/1"/>
+            <sbol:start>1</sbol:start>
+            <sbol:end>318</sbol:end>
+            <sbol:orientation rdf:resource="http://sbols.org/v2#inline"/>
+          </sbol:Range>
+        </sbol:location>
+        <sbol:role rdf:resource="http://identifiers.org/so/SO:0000704"/>
+      </sbol:SequenceAnnotation>
+    </sbol:sequenceAnnotation>
+    <sbol:sequence rdf:resource="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913_seq/1"/>
+  </sbol:ComponentDefinition>
+  <sbol:Sequence rdf:about="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913_seq/1">
+    <sbol:persistentIdentity rdf:resource="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913_seq"/>
+    <sbol:displayId>NC_000913_seq</sbol:displayId>
+    <sbol:version>1</sbol:version>
+    <sbh:ownedBy rdf:resource="https://synbiohub.utah.edu/user/continuous"/>
+    <sbh:topLevel rdf:resource="https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913_seq/1"/>
+    <sbol:elements>atggctgaatggagcggcgaatatatcagcccatacgctgagcacggcaagaagagtgaacaagtcaaaaagattacggtttccattcctcttaaggtgttaaaaatcctcaccgatgaacgcacgcgtcgtcaggtgaacaacctgcgtcacgctaccaacagcgagctgctgtgcgaagcgtttctgcatgcctttaccgggcaacctttgccggatgatgccgatctgcgtaaagagcgcagcgacgaaatcccggaagcggcaaaagagatcatgcgtgagatggggattaacccggagacgtgggaatactaa</sbol:elements>
+    <sbol:encoding rdf:resource="http://www.chem.qmul.ac.uk/iubmb/misc/naseq.html"/>
+  </sbol:Sequence>
+</rdf:RDF>

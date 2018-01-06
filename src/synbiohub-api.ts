@@ -32,18 +32,54 @@ export default class SynBioHub {
     return this.authenticate()
   }
 
+  public getSBOL(uri: string): Promise<string> {
+    if (!uri.startsWith(this.url)) {
+      return Promise.reject("Not a part of this SynBioHub")
+    }
+
+    let sbolUrl = this.join(uri, "sbol")
+
+    return this.sendGetRequest(sbolUrl).then(response => {
+      return response.data
+    })
+  }
+
+  private join(...parts: string[]) {
+    let strippedParts: string[] = [this.url]
+
+    parts.forEach(part => {
+      if (part === this.url) {
+        return
+      } else if (part.startsWith(this.url)) {
+        part = part.substr(this.url.length)
+      }
+
+      if (part.startsWith("/")) {
+        part = part.substr(1)
+      }
+
+      if (part.endsWith("/")) {
+        part = part.substr(0, part.length - 1)
+      }
+
+      strippedParts.push(part)
+    })
+
+    return strippedParts.join("/")
+  }
+
   private authenticate(): Promise<boolean> {
     let body = {
       email: this.user.email,
       password: this.user.password
     }
 
-    return this.sendJSONRequest("/login", body)
+    return this.sendJSONRequest("login", body)
       .then(response => {
         if (response == null || response.status > 300) {
           return false
         } else {
-          this.user.token = response.toString()
+          this.user.token = response.data.toString()
           return true
         }
       })
@@ -61,7 +97,7 @@ export default class SynBioHub {
 
   private sendGetRequest(endpoint: string): AxiosPromise {
     let options = {
-      url: this.url + endpoint,
+      url: this.join(this.url, endpoint),
       method: "get",
       headers: {
         Accept: "text/plain",
@@ -78,7 +114,7 @@ export default class SynBioHub {
 
   private sendJSONRequest(endpoint: string, body?: object): AxiosPromise {
     let options = {
-      url: this.url + endpoint,
+      url: this.join(this.url, endpoint),
       method: "post",
       headers: {
         Accept: "text/plain",

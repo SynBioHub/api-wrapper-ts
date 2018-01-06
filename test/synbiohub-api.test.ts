@@ -1,4 +1,5 @@
 import SynBioHub from "../src/synbiohub-api"
+import fs from "fs"
 
 /**
  * SynBioHub tests
@@ -41,18 +42,37 @@ describe("SynBioHub", () => {
   it("retrieves root collections", () => {
     let synbiohub = new SynBioHub("https://synbiohub.utah.edu")
 
-    synbiohub
-      .login("continuous@integration.com", "continuousintegration")
-      .then(success => {
+    return expect(
+      synbiohub.login("continuous@integration.com", "continuousintegration").then(success => {
         if (success) {
-          console.log(success)
-          return synbiohub.getRootCollections()
+          return synbiohub.getRootCollections().then(collections => {
+            return (
+              collections.indexOf(
+                "https://synbiohub.utah.edu/user/continuous/CanaryCollection/CanaryCollection_collection/1"
+              ) !== -1
+            )
+          })
         } else {
           fail()
         }
       })
-      .then(collections => {
-        console.log(collections)
+    ).resolves.toBeTruthy()
+  })
+
+  // SBOL Retrieval
+  it("retrieves proper SBOL", () => {
+    let synbiohub = new SynBioHub("https://synbiohub.utah.edu")
+
+    return expect(
+      synbiohub.login("continuous@integration.com", "continuousintegration").then(success => {
+        if (success) {
+          return synbiohub.getSBOL(
+            "https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913/1/"
+          )
+        } else {
+          fail()
+        }
       })
+    ).resolves.toEqual(fs.readFileSync("test/resources/sbol.rdf").toString())
   })
 })
