@@ -32,14 +32,30 @@ export default class SynBioHub {
     return this.authenticate()
   }
 
+  public getGenBank(uri: string): Promise<string> {
+    return this.topLevelRetrieval(uri, "genbank.gb")
+  }
+
+  public getFASTA(uri: string): Promise<string> {
+    return this.topLevelRetrieval(uri, "fasta.fasta")
+  }
+
   public getSBOL(uri: string): Promise<string> {
-    if (!uri.startsWith(this.url)) {
+    return this.topLevelRetrieval(uri, "sbol")
+  }
+
+  public getAttachment(uri: string): Promise<any> {
+    return this.topLevelRetrieval(uri, "download")
+  }
+
+  private topLevelRetrieval(topLevelUri: string, action: string): Promise<string> {
+    if (!topLevelUri.startsWith(this.url)) {
       return Promise.reject("Not a part of this SynBioHub")
     }
 
-    let sbolUrl = this.join(uri, "sbol")
+    let url = this.join(topLevelUri, action)
 
-    return this.sendGetRequest(sbolUrl).then(response => {
+    return this.sendGetRequest(url).then(response => {
       return response.data
     })
   }

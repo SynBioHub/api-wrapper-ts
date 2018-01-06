@@ -38,6 +38,12 @@ describe("SynBioHub", () => {
     ).resolves.toBeFalsy()
   })
 
+  it("correctly rejects empty credentials", () => {
+    return expect(new SynBioHub("https://synbiohub.utah.edu").login("", "")).rejects.toEqual(
+      "You must provide a username and password."
+    )
+  })
+
   // Root Collections
   it("retrieves root collections", () => {
     let synbiohub = new SynBioHub("https://synbiohub.utah.edu")
@@ -74,5 +80,39 @@ describe("SynBioHub", () => {
         }
       })
     ).resolves.toEqual(fs.readFileSync("test/resources/sbol.rdf").toString())
+  })
+
+  // GenkBank Retrieval
+  it("retrieves proper GenBank", () => {
+    let synbiohub = new SynBioHub("https://synbiohub.utah.edu")
+
+    return expect(
+      synbiohub.login("continuous@integration.com", "continuousintegration").then(success => {
+        if (success) {
+          return synbiohub.getGenBank(
+            "https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913/1/"
+          )
+        } else {
+          fail()
+        }
+      })
+    ).resolves.toEqual(fs.readFileSync("test/resources/genbank.gb").toString())
+  })
+
+  // FASTA Retrieval
+  it("retrieves proper FASTA", () => {
+    let synbiohub = new SynBioHub("https://synbiohub.utah.edu")
+
+    return expect(
+      synbiohub.login("continuous@integration.com", "continuousintegration").then(success => {
+        if (success) {
+          return synbiohub.getFASTA(
+            "https://synbiohub.utah.edu/user/continuous/SmallFile/NC_000913/1/"
+          )
+        } else {
+          fail()
+        }
+      })
+    ).resolves.toEqual(fs.readFileSync("test/resources/fasta.fasta").toString())
   })
 })
